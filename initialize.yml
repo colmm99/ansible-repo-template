@@ -1,0 +1,21 @@
+---
+# Bootstrap nodes in an environment.
+#
+# Use this playbook (perhaps with a custom inventory) to bootstrap an
+# environment wherever you need it. This playbook acts as a precursor to
+# applying site.yml. These are things you may want to run only once.
+#
+- hosts: all
+  become: true
+
+  pre_tasks:
+    - name: Check connectivity
+      ping:
+        data: alive
+      tags: healthcheck
+
+  roles:
+    - role: common
+
+  tasks:
+    - import_tasks: tasks/create_ansible_user.yml

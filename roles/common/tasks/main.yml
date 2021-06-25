@@ -1,0 +1,7 @@
+---
+- name: Check connectivity
+  ping:
+    data: alive
+  tags: healthcheck
+
+# Add additional tasks that apply to _all_ nodes...

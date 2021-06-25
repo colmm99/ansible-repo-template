@@ -1,0 +1,24 @@
+---
+- name: Add user 'ansible'
+  user:
+    name: ansible
+    comment: Ansible service account
+    shell: /bin/bash
+
+- name: Set authorized key for user 'ansible'
+  authorized_key:
+    user: ansible
+    state: present
+    exclusive: true
+    key: '{{ item }}'
+  with_file:
+    - files/authorized_keys/ansible
+
+- name: Define sudoers privileges for 'ansible'
+  copy:
+    dest: "/etc/sudoers.d/ansible"
+    owner: root
+    group: root
+    mode: '0440'
+    content: |
+      ansible ALL=(ALL) NOPASSWD:ALL

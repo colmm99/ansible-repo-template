@@ -1,0 +1,12 @@
+---
+roles: []
+#  - name: geerlingguy.java
+#    version: 1.9.6
+
+collections: []
+#  - name: geerlingguy.php_roles
+#    version: 0.9.3
+#    source: https://galaxy.ansible.com
+#  - name: https://github.com/organization/repo_name.git
+#    type: git
+#    version: devel

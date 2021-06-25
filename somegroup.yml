@@ -1,0 +1,5 @@
+---
+- hosts: somegroup
+  roles:
+    - common
+    # Add additional roles to apply to the _somegroup_ group...
