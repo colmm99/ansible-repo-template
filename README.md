@@ -23,6 +23,7 @@ Pre-flight checklist:
 To download or update roles and collections:
 
     ansible-galaxy install -r requirements.yml
+    ansible-galaxy collection install -r requirements.yml
 
 To bootstrap the entire environment (with an optional inventory file):
 
