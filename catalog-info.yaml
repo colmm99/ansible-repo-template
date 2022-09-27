@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ansible-repo-template
+  annotations:
+    github.com/project-slug: colmm99/ansible-repo-template
+spec:
+  type: other
+  lifecycle: unknown
+  owner: infrastructure
